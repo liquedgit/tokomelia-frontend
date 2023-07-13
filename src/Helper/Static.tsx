@@ -21,3 +21,5 @@ export const MUTATION_CREATE_USER = `mutation CreateUser($inputUser : NewUser!){
     role
   }
 }`
+
+export const JWT_SECRET_TOKEN = import.meta.env.VITE_JWT_SECRET_TOKEN
