@@ -1,17 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {BrowserRouter,  Route,  Routes} from 'react-router-dom'
-// import './index.css'
+import './index.css'
 import {LoginViews} from "./views/LoginViews.tsx";
 import {ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
 import {GRAPHQL_LINK} from "./Helper/Static.tsx";
 import ProtectedRoute from "./ProtectedRoute..tsx";
 import HomeView from "./views/HomeView.tsx";
 
-// const router = createBrowserRouter([
-//     {path: '/login',
-//     element: <LoginViews/>}
-// ])
 
 export const client = new ApolloClient({
     uri: GRAPHQL_LINK,

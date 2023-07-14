@@ -1,0 +1,27 @@
+.navbar{
+    position: fixed;
+    display: flex;
+    color: white;
+    align-items: center;
+    height: 7vh;
+    width: 100%;
+    box-shadow: 3px 3px 2px darkgray;
+}
+
+.left{
+    margin-left: 5vh;
+}
+
+.right{
+    width: 8%;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5vh;
+}
+
+li{
+    text-decoration: none;
+    list-style-type: none;
+}
+

@@ -1,3 +1,7 @@
+import {setJwtToken} from "../Helper/jwt.tsx";
+import './css/LoginStyle.css'
+
+
 export function LoginViews(){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -7,7 +11,8 @@ export function LoginViews(){
         const data = await LoginController(username, password)
 
         if(data.token){
-            localStorage.setItem('token', data.token)
+
+            setJwtToken(data.token)
             navigate('/', {replace:true})
         }
     }
@@ -15,7 +20,7 @@ export function LoginViews(){
 
     return (
         <>
-            <h1>THIS IS LOGIN VIEW</h1>
+            <NavbarComponent/>
             <form onSubmit={async(e)=>{
                 await handleSubmit(e);
             }}>
@@ -43,3 +48,4 @@ import {LoginController} from "../Controller/AuthenticationController.tsx";
 
 
 import {useNavigate} from "react-router-dom";
+import NavbarComponent from "../Components/NavbarComponent.tsx";
