@@ -21,24 +21,33 @@ export function LoginViews(){
     return (
         <>
             <NavbarComponent/>
-            <form onSubmit={async(e)=>{
-                await handleSubmit(e);
-            }}>
 
-                <input
-                    type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    placeholder="Username"
-                />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                />
-                <button type="submit">Login</button>
-            </form>
+            <div className="view-layout">
+                <div className="outline-form">
+                    <form className={"inner-form"} onSubmit={async(e)=>{
+                        await handleSubmit(e);
+                    }}>
+                        <h1 className={"color-green title"}>Login</h1>
+                        <div className={"form-input"}>
+
+                            <input
+                                type="text"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                placeholder="Username"
+                            />
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                placeholder="Password"
+                            />
+                            <button type="submit">Login</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
         </>
 
 );

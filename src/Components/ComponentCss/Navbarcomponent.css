@@ -1,11 +1,13 @@
 .navbar{
+    z-index: 1000;
     position: fixed;
     display: flex;
     color: white;
     align-items: center;
-    height: 7vh;
+    height: 10vh;
     width: 100%;
     box-shadow: 3px 3px 2px darkgray;
+    background-color: white;
 }
 
 .left{
