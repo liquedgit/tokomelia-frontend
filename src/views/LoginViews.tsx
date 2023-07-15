@@ -42,7 +42,7 @@ export function LoginViews(){
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Password"
                             />
-                            <button type="submit">Login</button>
+                            <button type="submit" className={"button-login"}>Login</button>
                         </div>
                     </form>
 
