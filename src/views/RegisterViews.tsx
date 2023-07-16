@@ -1,6 +1,6 @@
 import styles from './css/RegisterStyle.module.css'
 import {FormEvent, useState} from "react";
-import {LoginController, RegisterController} from "../Controller/AuthenticationController.tsx";
+import { RegisterController} from "../Controller/AuthenticationController.tsx";
 import {useNavigate} from "react-router-dom";
 import NavbarComponent from "../Components/NavbarComponent.tsx";
 
@@ -15,7 +15,6 @@ export function RegisterViews(){
         const data = await RegisterController(username,password,confirmPassword,email)
         if(data.data){
             navigate("/login", {replace:true})
-            // console.log(data)
         }
     }
 

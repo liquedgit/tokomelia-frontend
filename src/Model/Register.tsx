@@ -18,7 +18,6 @@ export async function RegisterUser(username : string, password : string, confirm
                 inputUser : inputUserobj
             },
         })
-        console.log(response)
         return response.data
     }catch (err){
         console.error(err);
