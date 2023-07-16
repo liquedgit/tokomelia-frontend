@@ -1,9 +1,12 @@
+import NavbarComponent from "../Components/NavbarComponent.tsx";
+
 export default function HomeView(){
     return(
         <>
-            <h1>
-                this is Home page
-            </h1>
+            <NavbarComponent/>
+            <div className={"view-layout"}>
+                <h1>this is home page</h1>
+            </div>
         </>
     )
 }

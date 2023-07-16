@@ -1,4 +1,4 @@
-.view-layout{
+.custom-view-layout{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,13 +15,11 @@
     justify-content: center;
 }
 
-h1{
-    text-align: center;
-}
 
 .title{
     font-weight: bold;
     margin-bottom: 1vw;
+    text-align: center;
 }
 
 .form-input{
@@ -30,7 +28,7 @@ h1{
     align-items: center;
 }
 
-input{
+.input-bar{
     margin-bottom: 1vw;
     padding: 10px 10px 10px 10px;
     border: 1px solid black;

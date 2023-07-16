@@ -16,10 +16,11 @@ export const QUERY_GET_ALL_USER = `query GetAllUser{
 
 export const MUTATION_CREATE_USER = `mutation CreateUser($inputUser : NewUser!){
   createNewUser(input : $inputUser){
-    id
     username
-    role
   }
 }`
 
 export const JWT_SECRET_TOKEN = import.meta.env.VITE_JWT_SECRET_TOKEN
+
+export const ROLE_ADMIN = 'admin'
+export const ROLE_USER = 'user'
