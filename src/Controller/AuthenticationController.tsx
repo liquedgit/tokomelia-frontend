@@ -1,5 +1,5 @@
 import {AuthenticateLogin, ResponseLogin} from "../Model/Login.tsx";
-import { RegisterUser} from "../Model/Register.tsx";
+import {RegisterUser, VerifyEmail} from "../Model/Register.tsx";
 
 export async function LoginController(username : string, password : string){
     const data = await AuthenticateLogin(username, password)
@@ -23,4 +23,9 @@ export async function LoginController(username : string, password : string){
 export async function RegisterController(username : string, password :string, confirmPassword : string, email : string){
     const data = await RegisterUser(username, password, confirmPassword, email)
     return data;
+}
+
+export async function VerifyEmailController(token : string){
+    const data = await VerifyEmail(token)
+    return data
 }

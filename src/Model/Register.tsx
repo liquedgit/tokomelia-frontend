@@ -1,5 +1,5 @@
 import axios from "axios";
-import {GRAPHQL_LINK, MUTATION_CREATE_USER} from "../Helper/Static.tsx";
+import {GRAPHQL_LINK, MUTATION_CREATE_USER, MUTATION_VERIFY_EMAIL} from "../Helper/Static.tsx";
 
 export async function RegisterUser(username : string, password : string, confirmPassword : string, email : string){
 
@@ -21,5 +21,20 @@ export async function RegisterUser(username : string, password : string, confirm
         return response.data
     }catch (err){
         console.error(err);
+    }
+}
+
+export async function VerifyEmail(token :string){
+    try{
+        const response = await axios.post(GRAPHQL_LINK, {
+            query : MUTATION_VERIFY_EMAIL,
+            variables : {
+                token : token
+            }
+        })
+        console.log(response)
+        return response.data
+    }catch (err){
+        console.error(err)
     }
 }

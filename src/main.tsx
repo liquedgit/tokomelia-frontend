@@ -8,6 +8,7 @@ import {GRAPHQL_LINK} from "./Helper/Static.tsx";
 import ProtectedRoute from "./ProtectedRoute..tsx";
 import HomeView from "./views/HomeView.tsx";
 import {RegisterViews} from "./views/RegisterViews.tsx";
+import {VerifyEmailViews} from "./views/VerifyEmail.tsx";
 
 
 export const client = new ApolloClient({
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 </Route>
                 <Route path={'/login'} element={<LoginViews/>}/>
                 <Route path={'/register'} element={<RegisterViews/>}/>
+                <Route path={'/verify/:token'} element={<VerifyEmailViews/>}/>
             </Routes>
           </BrowserRouter>
       </ApolloProvider>

@@ -20,6 +20,12 @@ export const MUTATION_CREATE_USER = `mutation CreateUser($inputUser : NewUser!){
   }
 }`
 
+export const MUTATION_VERIFY_EMAIL = `mutation VerifyUser($token : String!){
+  verifyEmail(token: $token){
+    message
+  }
+}`
+
 export const JWT_SECRET_TOKEN = import.meta.env.VITE_JWT_SECRET_TOKEN
 
 export const ROLE_ADMIN = 'admin'
