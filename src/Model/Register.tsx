@@ -32,7 +32,6 @@ export async function VerifyEmail(token :string){
                 token : token
             }
         })
-        console.log(response)
         return response.data
     }catch (err){
         console.error(err)

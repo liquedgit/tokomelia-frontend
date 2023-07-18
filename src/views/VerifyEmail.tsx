@@ -8,9 +8,8 @@ export function VerifyEmailViews(){
     const [isLoading, setLoading] = useState(true)
     useEffect(()=>{
         if(token){
-            let VerifiedEmail = async ()=>{
-                let decodedToken = decodeURIComponent(token)
-                const data  = await VerifyEmailController(decodedToken)
+            const VerifiedEmail = async ()=>{
+                const data  = await VerifyEmailController(token)
                 setLoading(false)
                 if(data.errors){
                     setError(data.errors[0].message)
