@@ -14,10 +14,10 @@ export default function NavbarComponent(){
                 {
                     !jwt && (
                         <div className={"right"}>
-                            <ButtonComponent to={"/login"} style={"color-green p-8 border-green bg-white rounded-md"}>
+                            <ButtonComponent to={"/login"} style={"child color-green p-8 border-green bg-white rounded-md"}>
                                 Login
                             </ButtonComponent>
-                            <ButtonComponent to={"/register"} style={"color-white border-green bg-green rounded-md p-8"}>
+                            <ButtonComponent to={"/register"} style={"child color-white border-green bg-green rounded-md p-8"}>
                                 Register
                             </ButtonComponent>
                         </div>

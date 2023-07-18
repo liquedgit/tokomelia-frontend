@@ -1,18 +1,18 @@
 .custom-view-layout{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    width: 100%;
+
 }
 
 .outline-form{
-    width: 20%;
-    height: 10%;
-    display: flex;
-    background-color: white;
-    border: 1px solid black;
+    padding: 10px;
     border-radius: 10px;
-    padding: 2vw 2vw 15vw 2vw;
-    justify-content: center;
+    max-width: 350px;
+    margin: 13% auto;
+    text-align: center;
+    background-color: white;
 }
 
 
@@ -32,13 +32,14 @@
     margin-bottom: 1vw;
     padding: 10px 10px 10px 10px;
     border: 1px solid black;
+    width: 13vw;
     border-radius: 10px;
 }
 
 .button-register{
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 75%;
+    width: 30%;
     border: 1px solid black;
     border-radius: 20px;
 }
